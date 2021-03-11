@@ -1,13 +1,11 @@
-FROM alpine:3.9
-
-MAINTAINER pstauffer@confirm.ch
+FROM arm32v7/alpine:latest
 
 #
 # Install all required dependencies.
 #
 
 RUN apk --update upgrade && \
-    apk add --update bind && \
+    apk add --update bind bash && \
     rm -rf /var/cache/apk/*
 
 
